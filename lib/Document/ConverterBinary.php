@@ -78,7 +78,10 @@ class ConverterBinary {
 			if (trim((string)$e->getMessage()) === 'Empty sFileFrom or sFileTo') {
 				return true;
 			}
-			$this->logger->error('Error while testing x2t binary', ['exception' => $e, 'app' => 'documentserver_community']);
+			$this->logger->error(
+				'Error while testing x2t binary', 
+				['exception' => $e, 'app' => 'documentserver_community']
+			);
 			return false;
 		}
 	}

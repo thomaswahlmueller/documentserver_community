@@ -51,7 +51,7 @@ class RebuildFonts implements IRepairStep {
 		try {
 			$this->fontManager->rebuildFonts();
 		} catch (\Exception $e) {
-			$this->logger->warning("Error while trying to rebuild fonts, if you had any custom fonts configured you'll need to run `occ documentserver:fonts --rebuild`", ['exception' => $e, 'app' => 'documentserver_community']);
+			$this->logger->warning('An exception occurred trying to rebuild fonts', ['exception' => $e]);
 			$output->warning("Error while trying to rebuild fonts, if you had any custom fonts configured you'll need to run `occ documentserver:fonts --rebuild`");
 		}
 	}

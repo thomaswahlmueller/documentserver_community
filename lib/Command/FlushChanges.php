@@ -73,7 +73,10 @@ class FlushChanges extends Base {
 				try {
 					$this->saveHandler->flushChanges($documentId);
 				} catch (\Exception $e) {
-					$this->logger->error('Error while applying changes for document ' . $documentId, ['exception' => $e, 'app' => 'documentserver_community']);
+					$this->logger->error(
+						'Error while applying changes for document ' . $documentId, 
+						['exception' => $e, 'app' => 'documentserver_community']
+					);
 				}
 			}
 		}
